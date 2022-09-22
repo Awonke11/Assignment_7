@@ -6,43 +6,43 @@
  */
 
 public class Person {
-    public static String personName;
-    public static int personAge;
-    public static String personGender;
+    public String name;
+    public int age;
+    public String gender;
 
     public Person(String name, int age, String gender) {
-        personName = name;
-        personAge = age;
-        personGender = gender;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
     }
 
     // ^ Accessor Methods - Getters
-    public String getPersonName() { // & personName
-        return personName;
+    public String getName() { // & name
+        return this.name;
     }
 
-    public int getPersonAge() { // & personAge
-        return personAge;
+    public int getAge() { // & age
+        return this.age;
     }
 
-    public String getPersonGender() { // & personGender
-        return personGender;
+    public String getGender() { // & gender
+        return this.gender;
     }
 
     // ^ Mutator Methods - Setters
-    public void setPersonName(String name) { // & personName
-        personName = name;
+    public void setName(String name) { // & name
+        this.name = name;
     }
 
-    public void setPersonAge(int age) { // & personAge
-        personAge = age;
+    public void setAge(int age) { // & age
+        this.age = age;
     }
 
-    public void setPersonGender(String gender) { // & personGender
-        personGender = gender;
+    public void setGender(String gender) { // & gender
+        this.gender = gender;
     }
 
     public String toString() {
-        return String.format("Name: %s \nAge: %d \nGender: %s", personName, personAge, personGender);
+        return String.format("Name: %s \nAge: %d \nGender: %s", name, age, gender);
     }
 }

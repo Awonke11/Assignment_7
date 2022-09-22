@@ -7,25 +7,25 @@
 
 public class Vehicle {
     // & Initializing the variables
-    public int numberOfCylinders;
-    public String nameOfManufacturer;
+    public int cylinders;
+    public String manufacturer;
     public Student owner;
 
     // & Constructor
     public Vehicle(int numCylinders, String maker, Student owner) {
-        this.numberOfCylinders = numCylinders;
-        this.nameOfManufacturer = maker;
+        this.cylinders = numCylinders;
+        this.manufacturer = maker;
         this.owner = owner;
     }
 
     // & Constructor Copy
     public Vehicle(Vehicle v) {
-        this(v.numberOfCylinders, v.nameOfManufacturer, v.owner); // ^ this == Vehicle Object
+        this(v.cylinders, v.manufacturer, v.owner); // ^ this == Vehicle Object
     }
 
     // & String presentation of the information
     public String toString() {
-        return String.format("Number of Cylinders: %d \nName of Manufacturer: %s \nOwner: %s", this.numberOfCylinders,
-                this.nameOfManufacturer, this.owner.getPersonName());
+        return String.format("Number of Cylinders: %d \nName of Manufacturer: %s \nOwner: %s", this.cylinders,
+                this.manufacturer, this.owner.getName());
     }
 }

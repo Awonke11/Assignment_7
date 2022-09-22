@@ -5,7 +5,7 @@
  * Student Number: MNTAWO002
  * 
  */
-class Question1 {
+public class Question1 {
    public static void main(String args[]) {
       System.out.println(new Shape("Pentagon", "Blue"));
       System.out.println(new Circle("Circle", "Purple", 3));
@@ -15,49 +15,49 @@ class Question1 {
 
 class Shape {
    // & Initializing the variables
-   protected String shapeName;
-   protected String shapeColor;
+   public String name;
+   public String color;
 
    // & Initializing the constructor
-   Shape(String shapeName, String shapeColor) {
-      this.shapeName = shapeName;
-      this.shapeColor = shapeColor;
+   Shape(String name, String color) {
+      this.name = name;
+      this.color = color;
    }
 
    // & Formatting the variables into a string
    public String toString() {
-      return String.format("%s %s", shapeName, shapeColor);
+      return String.format("%s %s", name, color);
    }
 }
 
 class Circle extends Shape {
 
-   protected double circleRadius; // ^ Additional Circle radius
+   public double radius; // ^ Additional Circle radius
 
-   Circle(String shapeName, String shapeColor, double circleRadius) {
-      super(shapeName, shapeColor); // * Inherits the parent constructor
-      this.circleRadius = circleRadius;
+   Circle(String name, String color, double radius) {
+      super(name, color); // * Inherits the parent constructor
+      this.radius = radius;
 
       this.toString();
    }
 
    // ^ Override the parent class to String to add the additional variable
    public String toString() {
-      return String.format("%s %s Radius %.1f", shapeName, shapeColor, circleRadius);
+      return String.format("%s %s Radius %.1f", name, color, radius);
    }
 }
 
 class Rectangle extends Shape {
-   protected double height, width; // ^ Initialized additional variables
+   public double length, width; // ^ Initialized additional variables
 
-   Rectangle(String shapeName, String shapeColor, double height, double width) {
-      super(shapeName, shapeColor); // * Inherits the parent constructor
-      this.height = height;
+   Rectangle(String name, String color, double length, double width) {
+      super(name, color); // * Inherits the parent constructor
+      this.length = length;
       this.width = width;
    }
 
    // ^ Override the parent class to String to add the additional variable
    public String toString() {
-      return String.format("%s %s Length %.1f Width %.1f", shapeName, shapeColor, this.height, this.width);
+      return String.format("%s %s Length %.1f Width %.1f", name, color, this.length, this.width);
    }
 }

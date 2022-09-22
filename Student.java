@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 /*
  * A program thats creates a Student Object 
  * Author: Awonke Mnotoza
@@ -8,58 +6,59 @@ import java.util.ArrayList;
  */
 public class Student extends Person {
     // & Initialized the variables
-    public String institution;
-    public String programmeOfStudy;
+    public String nameOfInstitution;
+    public String programOfStudy;
     public int yearOfStudy;
-    // ^ Store the array of hobbie(s)
-    public ArrayList<String> hobbies;
+    public String hobbies;
 
-    Student(String personName, int personAge, String personGender, String institution, String programmeOfStudy,
-            int yearOfStudy, String[] hobbies) {
-        super(personName, personAge, personGender); // ^ Inherited the constructor from the parent class
-        this.institution = institution;
-        this.programmeOfStudy = programmeOfStudy;
+    Student(String name, int age, String gender, String nameOfInstitution, String programOfStudy,
+            int yearOfStudy, String hobbies) {
+        super(name, age, gender); // ^ Inherited the constructor from the parent class
+        this.nameOfInstitution = nameOfInstitution;
+        this.programOfStudy = programOfStudy;
         this.yearOfStudy = yearOfStudy;
-        for (int i = 0; i < hobbies.length; i++) {
-            this.hobbies.add(hobbies[i]);
-        }
+        this.hobbies = hobbies;
+    }
+
+    Student(String name, int age, String gender, String nameOfInstitution, String programOfStudy,
+            String hobbies) {
+        super(name, age, gender); // ^ Inherited the constructor from the parent class
+        this.nameOfInstitution = nameOfInstitution;
+        this.programOfStudy = programOfStudy;
+        this.hobbies = hobbies;
     }
 
     // & Accessor methods - Getters
-    public String getInstitution() {
-        return this.institution;
+    public String getNameOfInstitution() {
+        return this.nameOfInstitution;
     }
 
-    public String getProgrammeOfStudy() {
-        return this.programmeOfStudy;
+    public String getProgramOfStudy() {
+        return this.programOfStudy;
     }
 
     public int getYearOfStudy() {
         return this.yearOfStudy;
     }
 
-    public String[] getHobbies() {
-        String[] extractHobbies = new String[this.hobbies.size()];
-        for (int i = 0; i < hobbies.size(); i++) {
-            extractHobbies[i] = (hobbies.get(i));
-        }
-        return extractHobbies;
+    public String getHobbies() {
+        return this.hobbies;
     }
 
     // & Mutator Methods - Setters
-    public void setInstitution(String institution) {
-        this.institution = institution;
+    public void setNameOfInstitution(String nameOfInstitution) {
+        this.nameOfInstitution = nameOfInstitution;
     }
 
-    public void setProgrammeOfStudy(String programmeOfStudy) {
-        this.programmeOfStudy = programmeOfStudy;
+    public void setProgramOfStudy(String programOfStudy) {
+        this.programOfStudy = programOfStudy;
     }
 
     public void setYearOfStudy(int yearOfStudy) {
         this.yearOfStudy = yearOfStudy;
     }
 
-    public void setHobbies(String hobbie) {
-        hobbies.add(hobbie);
+    public void setHobbies(String hobbies) {
+        this.hobbies = hobbies;
     }
 }
