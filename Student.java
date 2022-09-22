@@ -20,7 +20,7 @@ public class Student extends Person {
         this.hobbies = hobbies;
     }
 
-    public Student(Student s) {
+    public Student(Student s) { // ^ Copy constructor
         this(s.name, s.age, s.gender, s.nameOfInstitution, s.programOfStudy, s.yearOfStudy, s.hobbies);
     }
 

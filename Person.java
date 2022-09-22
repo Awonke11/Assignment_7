@@ -6,11 +6,12 @@
  */
 
 public class Person {
+    // & Initializing the variables
     public String name;
     public int age;
     public String gender;
 
-    public Person(Person p) {
+    public Person(Person p) { // ^ Copy constructor
         this(p.name, p.age, p.gender);
     }
 
