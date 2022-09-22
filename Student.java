@@ -11,7 +11,7 @@ public class Student extends Person {
     public int yearOfStudy;
     public String hobbies;
 
-    Student(String name, int age, String gender, String nameOfInstitution, String programOfStudy,
+    public Student(String name, int age, String gender, String nameOfInstitution, String programOfStudy,
             int yearOfStudy, String hobbies) {
         super(name, age, gender); // ^ Inherited the constructor from the parent class
         this.nameOfInstitution = nameOfInstitution;
@@ -20,12 +20,8 @@ public class Student extends Person {
         this.hobbies = hobbies;
     }
 
-    Student(String name, int age, String gender, String nameOfInstitution, String programOfStudy,
-            String hobbies) {
-        super(name, age, gender); // ^ Inherited the constructor from the parent class
-        this.nameOfInstitution = nameOfInstitution;
-        this.programOfStudy = programOfStudy;
-        this.hobbies = hobbies;
+    public Student(Student s) {
+        this(s.name, s.age, s.gender, s.nameOfInstitution, s.programOfStudy, s.yearOfStudy, s.hobbies);
     }
 
     // & Accessor methods - Getters

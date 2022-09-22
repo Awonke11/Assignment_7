@@ -3,7 +3,6 @@
  * Author: Awonke Mnotoza
  * Date: 21 September 2022
  * Student Number: MNTAWO002
- * 
  */
 public class Question1 {
    public static void main(String args[]) {

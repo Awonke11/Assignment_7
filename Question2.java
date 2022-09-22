@@ -43,7 +43,7 @@ public class Question2 {
 
         // ^ Creating the student object
         Student student = new Student(vehicleOwner, ageOfOwner, ownerGender, nameOfnameOfInstitution, programOfStudy,
-                ownerHobbies);
+                carCapacity, ownerHobbies);
         // ^ Creating the car object
         Car car = new Car(cylinders, vehicleManufacturer, student, carCapacity, carWeight);
         System.out.println(car.toString());

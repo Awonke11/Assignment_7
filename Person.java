@@ -10,6 +10,10 @@ public class Person {
     public int age;
     public String gender;
 
+    public Person(Person p) {
+        this(p.name, p.age, p.gender);
+    }
+
     public Person(String name, int age, String gender) {
         this.name = name;
         this.age = age;
@@ -40,9 +44,5 @@ public class Person {
 
     public void setGender(String gender) { // & gender
         this.gender = gender;
-    }
-
-    public String toString() {
-        return String.format("Name: %s \nAge: %d \nGender: %s", name, age, gender);
     }
 }
